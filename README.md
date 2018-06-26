@@ -26,3 +26,6 @@ provide gw_mac, device_id and status into the json body, for example:
 	"status": "click"
 }
 ```
+# Attention
+Only tested with lumi.gateway.v3.
+If using with a diffrent model of gateway, the code maybe need modification due to the diffrences in the protocol version.
