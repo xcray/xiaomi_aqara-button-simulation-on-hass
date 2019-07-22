@@ -3,17 +3,19 @@ add a new service to the xiaomi_aqara component: simulating click/double_click o
 
 capbility to simulate actions of the wireless button is important for me (maybe someone else also need it), so I try to modified the code.
 
-2 files involved:
+btw, the light on the gateway shouldn't be controled via LAN API, or it will be out of order in native app. so I disabled it.
 
-- homeassistant/components/xiaomi_aqara.py
+another issue is about the illumination sensor, I don't know why to modify the value with -300, so I'd modified it.
 
-add the code for new service.
+3 files involved: __init__.py, sensor.py and services.yaml
+
+put them under the directory of homeassistant/components/xiaomi_aqara/
 
 by the way, I'd delete 'light' in line 149 due to the issue https://github.com/home-assistant/home-assistant/issues/15005.
 
 if you think that issue is not a problem to you, just add 'light' back
 
-- homeassistant/components/services.yaml
+- services.yaml
 
 add description of the new service
 
