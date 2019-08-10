@@ -7,7 +7,7 @@ btw, the light on the gateway shouldn't be controled via LAN API, or it will be 
 
 another issue is about the illumination sensor, I don't know why to modify the value with -300, so I'd modified it.
 
-3 files involved: __init__.py, sensor.py and services.yaml
+3 files involved: \__init__.py, sensor.py and services.yaml
 
 put them under the directory of homeassistant/components/xiaomi_aqara/
 
@@ -31,3 +31,5 @@ provide gw_mac, device_id and status into the json body, for example:
 # Attention
 Only tested with lumi.gateway.v3.
 If using with a diffrent model of gateway, the code maybe need modification due to the diffrences in the protocol version.
+
+newest code works with version 0.97 of home-assistant
