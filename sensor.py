@@ -19,6 +19,7 @@ SENSOR_TYPES = {
     "illumination": ["lm", None, DEVICE_CLASS_ILLUMINANCE],
     "lux": ["lx", None, DEVICE_CLASS_ILLUMINANCE],
     "pressure": ["hPa", None, DEVICE_CLASS_PRESSURE],
+    "bed_activity": ["μm", None, None],
 }
 
 
@@ -109,7 +110,7 @@ class XiaomiSensor(XiaomiDevice):
         if self._data_key in ["temperature", "humidity", "pressure"]:
             value /= 100
         '''elif self._data_key in ["illumination"]:
-            value = max(value - 300, 0)''' #deleted by XCray
+            value = max(value - 300, 0)'''#Deleted by XCray
         if self._data_key == "temperature" and (value < -50 or value > 60):
             return False
         if self._data_key == "humidity" and (value <= 0 or value > 100):
