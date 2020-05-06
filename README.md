@@ -33,3 +33,6 @@ Only tested with lumi.gateway.v3.
 If using with a diffrent model of gateway, the code maybe need modification due to the diffrences in the protocol version.
 
 newest code works with version 0.100.1 of home-assistant (maybe 0.100 is also ok)
+
+# unicode SMS
+notify.py (under /usr/src/homeassistant/homeassistant/components/sms/ directory) modified to support unicode SMS (ex. Chinese).
